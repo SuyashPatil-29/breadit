@@ -17,7 +17,6 @@ const UserAuthForm = ({ className }: UserAuthFormProps) => {
   const loginWithGoogle = async () => {
     setIsLoading(true);
     try {
-      throw new Error("Google login not implemented yet");  
       await signIn("google");
     } catch (error) {
         toast({
