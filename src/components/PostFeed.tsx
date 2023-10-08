@@ -1,14 +1,13 @@
 "use client"
 import { ExtendedPost } from '@/types/db'
-import React, { FC, useEffect, useRef } from 'react'
 import { useIntersection } from '@mantine/hooks'
 import { useInfiniteQuery } from '@tanstack/react-query'
-import { db } from '@/lib/db'
 import axios from 'axios'
-import { INFINITE_SCROLLING_PAGINATION_RESULTS } from '../../config'
-import { useSession } from 'next-auth/react'
-import Post from './Post'
 import { Loader2 } from 'lucide-react'
+import { useSession } from 'next-auth/react'
+import { FC, useEffect, useRef } from 'react'
+import { INFINITE_SCROLLING_PAGINATION_RESULTS } from '../../config'
+import Post from './Post'
 
 interface PostFeedProps {
     initialPosts: ExtendedPost[]

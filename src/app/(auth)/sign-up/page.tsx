@@ -3,7 +3,6 @@ import { buttonVariants } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 import { ChevronLeft } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
 
 const page = () => {
   return (
