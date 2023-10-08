@@ -137,7 +137,7 @@ const PostComment: FC<PostCommentProps> = ({
               <Button
                 isLoading={isLoading}
                 onClick={() => {
-                  if (input) return
+                  if (!input) return
                   postComment({
                     postId,
                     text: input,
