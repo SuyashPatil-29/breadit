@@ -1,10 +1,9 @@
 import ShowPostButton from "@/components/ShowPostButton";
 import SubscribeLeaveToggle from "@/components/SubscribeLeaveToggle";
-import { buttonVariants } from "@/components/ui/Button";
+import ToFeedButton from "@/components/ToFeedButton";
 import { getAuthSession } from "@/lib/authOptions";
 import { db } from "@/lib/db";
 import { format } from "date-fns";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const SubredditLayout = async ({children, params: {slug}}:{children:React.ReactNode, params: {slug: string}})=>{
@@ -49,7 +48,7 @@ const SubredditLayout = async ({children, params: {slug}}:{children:React.ReactN
     return(
         <div className="sm:container max-w-7xl mx-auto h-full pt-12">
             <div>
-                {/* <Button></Button> */}
+                <ToFeedButton />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-4 py-6">
                     <div className="flex flex-col col-span-2 space-y-6">{children}</div>
                     <div className="hidden md:block overflow-hidden h-fit rounded-lg border mt-14 border-gray-200 order-first md:order-last">
