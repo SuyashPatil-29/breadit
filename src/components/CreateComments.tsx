@@ -29,7 +29,7 @@ const CreateComments = ({postId, replyToId}: CommentProps) => {
         text,
         replyToId
       }
-      const {data} = await axios.patch("/api/subreddit/post/comment", payload) 
+      await axios.patch("/api/subreddit/post/comment", payload) 
       return
     },
     onError: (error) => {
@@ -50,7 +50,7 @@ const CreateComments = ({postId, replyToId}: CommentProps) => {
         variant: "destructive",
       });
     },
-    onSuccess : (data)=>{
+    onSuccess : ()=>{
       router.refresh();
       setInput("")
     }

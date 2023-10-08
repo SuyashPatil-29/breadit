@@ -3,9 +3,7 @@ import React from "react";
 import { INFINITE_SCROLLING_PAGINATION_RESULTS } from "../../config";
 import PostFeed from "./PostFeed";
 
-type Props = {};
-
-const GeneralFeed = async (props: Props) => {
+const GeneralFeed = async () => {
   const posts = await db.post.findMany({
     orderBy: {
       createdAt: "desc",
